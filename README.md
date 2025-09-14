@@ -25,20 +25,15 @@ Download mesh_index.faiss, mesh_metadata.pkl, supple_index.faiss and supple_meta
 Install the required dependencies
 
 # Usage
-Update data_loader.py with your Excel file's directory and name
+Define your PICOS, exclusion criteria, retrieval time, suffix rule and connection rule in Boolean query construction and literature screening.py
 
-Define your criteria in screening_text_generator.py
+Set your the above API key and email address in Boolean query construction and literature screening.py
 
-Set your OpenAI API key in gpt_integration.py
+Run the scripts (literature screening.py).
 
-Run the scripts in the following order:
+# Supplement
 
-bash
-python data_loader.py
-python screening_text_generator.py
-python gpt_integration.py
-Contributing
-Contributions are welcome! Please fork the repository and submit pull requests with your improvements.
+Construction of Main Index and Supplementary Index.py is used to generate mesh_index.faiss, mesh_metadata.pkl, supple_index.faiss and supple_metadata.pkl by desc2025 an supp2025. We have completed this stage by using the Pro/BAAI/bge-m3 in the siliconflow platform, users could choose othoer embedded models to complete this stage.
 
 # License
 This project is licensed under the MIT License. See the LICENSE file for more details.
