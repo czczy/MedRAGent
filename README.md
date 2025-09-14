@@ -37,4 +37,4 @@ Contributions are welcome! Please fork the repository and submit pull requests w
 # License
 This project is licensed under the MIT License. See the LICENSE file for more details.
 
-<style> body { font-size: 14pt; } </style>
+<style> body { font-size: 20pt; } </style>
