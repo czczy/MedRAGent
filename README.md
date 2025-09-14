@@ -1,9 +1,7 @@
 # MedRAGent
-An Automatic Literature Retrieval and Screening System
-Large language model-assisted citation screening
-This project demonstrates how to load data from an Excel file, generate screening texts based on specific criteria, and integrate with OpenAI's GPT-4 API for automated ciation screening.
+This an an automatic literature retrieval and screening system utilizing large language models with retrieval-augmented generation.
 
-Features
+# Features
 Data loading and processing with Pandas and Openpyxl.
 Text generation based on predefined criteria.
 Integration with OpenAI's GPT-4 API for automated citation screening.
