@@ -2,16 +2,18 @@
 This is an automatic literature retrieval and screening system utilizing large language models with retrieval-augmented generation.
 
 # Features
-Data loading and processing with Pandas and Openpyxl
+Data loading and processing with python
 
-Text generation based on predefined criteria
+Screening report generation based on predefined PICOS, exclusion criteria, retrieval time, suffix rule and connection rule
 
-Integration with OpenAI's GPT-4 API for automated citation screening
+Integration with word vector document, PubMed API and LLM API for automated Boolean query construcution and literature screening
 
 # Prerequisites
 Python 3.x
 
-An OpenAI API key with access to GPT-4
+An Entrez API key and Entrez email address with access to PubMed
+
+Any LLM API key (we use DeepSeek-V3-0324 and Kimi-K2-0711-preview)
 
 # Installation
 Clone the repository
@@ -36,5 +38,3 @@ Contributions are welcome! Please fork the repository and submit pull requests w
 
 # License
 This project is licensed under the MIT License. See the LICENSE file for more details.
-
-<style> body { font-size: 10pt; } </style>
