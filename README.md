@@ -2,21 +2,25 @@
 This is an automatic literature retrieval and screening system utilizing large language models with retrieval-augmented generation.
 
 # Features
-Data loading and processing with python
+Data loading and processing with python.
 
-Screening report generation based on predefined PICOS, exclusion criteria, retrieval time, suffix rule and connection rule
+Screening report generation based on predefined PICOS, exclusion criteria, retrieval time, suffix rule and connection rule.
 
-Integration with word vector document, PubMed API and LLM API for automated Boolean query construcution and literature screening
+Integration with word vector document, PubMed API and LLM API for automated Boolean query construcution and literature screening.
 
 # Prerequisites
 Python 3.x
 
-An Entrez API key and Entrez email address with access to PubMed
+An Entrez API key and Entrez email address with access to PubMed.
 
-Any LLM API key (we use DeepSeek-V3-0324 and Kimi-K2-0711-preview)
+Any LLM API key (we use DeepSeek-V3-0324 and Kimi-K2-0711-preview).
+
+A Siliconflow API key.
 
 # Installation
 Clone the repository
+
+Download mesh_index.faiss, mesh_metadata.pkl, supple_index.faiss and supple_metadata.pkl from A.
 
 Install the required dependencies
 
