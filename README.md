@@ -1,24 +1,24 @@
-MedRAGent
+# MedRAGent
 This is an automatic literature retrieval and screening system utilizing large language models with retrieval-augmented generation.
 
-Features
+# Features
 Data loading and processing with Pandas and Openpyxl.
 
 Text generation based on predefined criteria.
 
 Integration with OpenAI's GPT-4 API for automated citation screening.
 
-Prerequisites
+# Prerequisites
 Python 3.x
 
 An OpenAI API key with access to GPT-4.
 
-Installation
+# Installation
 Clone the repository.
 
 Install the required dependencies.
 
-Usage
+# Usage
 Update data_loader.py with your Excel file's directory and name.
 
 Define your criteria in screening_text_generator.py.
@@ -33,8 +33,8 @@ python screening_text_generator.py
 
 python gpt_integration.py
 
-Contributing
+# Contributing
 Contributions are welcome! Please fork the repository and submit pull requests with your improvements.
 
-License
+# License
 This project is licensed under the MIT License. See the LICENSE file for more details.
