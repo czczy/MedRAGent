@@ -867,7 +867,7 @@ if __name__ == "__main__":
         search_query = get_search_terms(
             picos_input=FULL_PICOS,
             selected_sections=SELECTED_SECTIONS,
-            time_range=("2001/05/01", "2024/02/13"),
+            time_range=("2001/05/01", "2024/02/13"), # retriveal time
             logic_rules=custom_rules,  # DEFAULT_LOGIC_RULES
             suffix_rules=DEFAULT_LOGIC_RULES  # Pass custom suffix rules
         )
@@ -914,4 +914,5 @@ if __name__ == "__main__":
     except Exception as e:
         print(f"\nSystem operation failed: {str(e)}")
     finally:
+
         print("\n=== Analysis process completed ===")
