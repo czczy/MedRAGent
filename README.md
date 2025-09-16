@@ -20,7 +20,7 @@ A Siliconflow API key.
 # Installation
 Clone the repository
 
-Download mesh_index.faiss, mesh_metadata.pkl, supple_index.faiss and supple_metadata.pkl from A.
+Download mesh_index.faiss, mesh_metadata.pkl, supple_index.faiss and supple_metadata.pkl from https://huggingface.co/datasets/nyczy34/MedRAGent.
 
 Install the required dependencies
 
