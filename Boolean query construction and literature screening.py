@@ -861,7 +861,7 @@ if __name__ == "__main__":
               #  {
                    # 'terms': ['word A', 'word B'],
                    # 'logic': 'OR',
-                   # 'group_name': 'races'
+                   # 'group_name': 'countries'
                # },
                # {
                    # 'terms': ['word C', 'word D'],
@@ -946,5 +946,6 @@ if __name__ == "__main__":
     finally:
 
         print("\n=== Analysis process completed ===")
+
 
 
