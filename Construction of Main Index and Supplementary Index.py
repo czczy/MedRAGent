@@ -16,7 +16,6 @@ XML_PATH = os.path.join(BASE_DIR, "")  # supp2025.xml or desc2025.xml
 SAVE_INDEX_PATH = os.path.join(BASE_DIR, "")  # supple_index.faiss or mesh_index.faiss
 SAVE_METADATA_PATH = os.path.join(BASE_DIR, "")  # supple_metadata.pkl or mesh_metadata.pkl
 SILICON_API_KEY = ''  # Replace with actual API key
-DEEPSEEK_API_KEY = ''  # Replace with actual API key
 CHUNK_SIZE = 100  # User-configurable chunk size [New configuration parameter]
 
 # ==================== SiliconFlow Embedding Model Wrapper ====================
@@ -138,3 +137,4 @@ if __name__ == "__main__":
     texts, metadata = parse_mesh_xml(XML_PATH)
     embedder = ProBAAIbgem3Embeddings(SILICON_API_KEY)
     create_vector_store(texts, metadata, embedder, CHUNK_SIZE)  # [Modified call method]
+
