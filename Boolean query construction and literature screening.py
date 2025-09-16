@@ -854,9 +854,42 @@ if __name__ == "__main__":
         'custom': {
         }
     }
+    #    custom_rules = {
+        #'default': {'within': 'OR', 'between': 'AND'},
+       # 'custom': {
+           # 'P': [
+              #  {
+                   # 'terms': ['word A', 'word B'],
+                   # 'logic': 'OR',
+                   # 'group_name': 'races'
+               # },
+               # {
+                   # 'terms': ['word C', 'word D'],
+                   # 'logic': 'OR',
+                   # 'group_name': 'ages'
+               # }
+           # ],
+           # 'I': [  
+              #  {
+                  #  'terms': ['word E', 'word F'],
+                   # 'logic': 'OR',
+                   # 'group_name': 'interventions'
+              #  }
+          #  ]
+       # }
+  #  } indicating that ((word A OR word B) AND (word C OR word D)) AND (word E or word F). If 'custom' is {}, the query would be (word A) AND (word B) AND (word C) AND (word D) AND (word E) AND (word F).
+    
     # Custom suffix rules
-    suffix_rules = {
+    suffix_rules = { 
     }
+    # suffix_rules = {
+       # 'P': {
+           # '*': ['[MeSH Terms]', '[Title/Abstract]']
+      #  },
+      #  'I': {
+           # 'word A': ['[MeSH Terms]']
+      #  }
+   # }   indicating that all words in P module add suffixes '[MeSH Terms]' and '[Title/Abstract]', word A in P module add suffix '[MeSH Terms]'. 
 
     try:
         # Step 1: Generate search query (pass suffix rules)
@@ -913,3 +946,4 @@ if __name__ == "__main__":
     finally:
 
         print("\n=== Analysis process completed ===")
+
