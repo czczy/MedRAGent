@@ -130,46 +130,7 @@ def create_vector_store(texts: List[str], metadata: List[dict], embedder: ProBAA
     faiss.write_index(index, SAVE_INDEX_PATH)
     with open(SAVE_METADATA_PATH, 'wb') as f:
         pickle.dump(valid_metadata, f)
-    print(f"Vector store creation completed, processed {len(valid_metadata)} valid entries")
-
-
-# ======================== RAG Query Section ========================
-class MeshRetriever:
-    def __init__(self):
-        self.index = faiss.read_index(SAVE_INDEX_PATH)
-        with open(SAVE_METADATA_PATH, 'rb') as f:
-            self.metadata = pickle.load(f)
-        self.embedder = ProBAAIbgem3Embeddings(SILICON_API_KEY)
-        self.llm = BaseChatOpenAI(
-            model='deepseek-chat',
-            openai_api_key=DEEPSEEK_API_KEY,
-            openai_api_base='https://api.deepseek.com'
-        )
-
-    def extract_nouns(self, text: str) -> List[str]:
-        prompt = f"""Please extract all nouns precisely from the following text, each noun on a separate line:
-        {text}
-        Output only English nouns, do not include any other content."""
-        response = self.llm.invoke(prompt)
-        return [n.strip() for n in response.content.split('\n') if n.strip()]
-
-    def search_mesh(self, query: str, threshold: float = 0.8):
-        nouns = self.extract_nouns(query)
-        results = {}
-
-        for noun in nouns:
-            query_vec = self.embedder.embed_query(noun)
-            query_vec = np.array(query_vec, dtype='float32').reshape(1, -1)
-            faiss.normalize_L2(query_vec)
-
-            distances, indices = self.index.search(query_vec, k=1)
-            if distances[0][0] >= threshold:
-                match = self.metadata[indices[0][0]]
-                results[noun] = match['Name']
-            else:
-                results[noun] = None
-        return results
-
+    print(f"Vector store creation completed, processed {len(valid_metadata)} valid entries"
 
 # ======================== Execution Flow ========================
 if __name__ == "__main__":
@@ -177,12 +138,3 @@ if __name__ == "__main__":
     texts, metadata = parse_mesh_xml(XML_PATH)
     embedder = ProBAAIbgem3Embeddings(SILICON_API_KEY)
     create_vector_store(texts, metadata, embedder, CHUNK_SIZE)  # [Modified call method]
-
-    # Execute query
-    retriever = MeshRetriever()
-    query = " adolescent"
-    results = retriever.search_mesh(query)
-
-    print("Query results:")
-    for noun, match in results.items():
-        print(f"- {noun}: {match if match else 'None'}")
