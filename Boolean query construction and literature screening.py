@@ -898,7 +898,7 @@ if __name__ == "__main__":
             picos_input=FULL_PICOS,
             selected_sections=SELECTED_SECTIONS,
             time_range=("2001/05/01", "2024/02/13"),
-            logic_rules=custom_rules,  # DEFAULT_LOGIC_RULES
+            logic_rules=custom_rules,  # custom_rules or DEFAULT_LOGIC_RULES
             suffix_rules=DEFAULT_LOGIC_RULES  # Pass custom suffix rules
         )
 
@@ -946,4 +946,5 @@ if __name__ == "__main__":
     finally:
 
         print("\n=== Analysis process completed ===")
+
 
