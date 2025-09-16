@@ -828,9 +828,6 @@ def save_results(results: List[Dict], filename: str):
 if __name__ == "__main__":
     print("=== Research Analysis System ===")
 
-    # Configure validation file path
-    VALIDATION_FILE = "Validation File (PubMed).xlsx"
-
     # ==================== User Input Area ====================
     # Input complete PICOS criteria and exclusion criteria (only define once here)
     FULL_PICOS = {
@@ -914,4 +911,5 @@ if __name__ == "__main__":
     except Exception as e:
         print(f"\nSystem operation failed: {str(e)}")
     finally:
+
         print("\n=== Analysis process completed ===")
