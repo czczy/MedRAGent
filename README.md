@@ -32,7 +32,6 @@ Set your the above API key and email address in Boolean query construction and l
 Run the scripts (literature screening.py).
 
 # Supplement
-
 Construction of Main Index and Supplementary Index.py is used to generate mesh_index.faiss, mesh_metadata.pkl, supple_index.faiss and supple_metadata.pkl by desc2025 an supp2025. We have completed this stage by using the Pro/BAAI/bge-m3 in the siliconflow platform, users could choose othoer embedded models to complete this stage.
 
 # License
