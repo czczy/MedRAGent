@@ -13,7 +13,7 @@ Python 3.x
 
 An Entrez API key and Entrez email address with access to PubMed.
 
-A LLM API key.
+A deepseek API key.
 
 A Siliconflow API key.
 
