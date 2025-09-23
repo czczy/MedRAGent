@@ -6,7 +6,7 @@ Data loading and processing with python.
 
 Screening report generation based on predefined PICOS, exclusion criteria, retrieval time, suffix rule and connection rule.
 
-Integration with word vector document, PubMed API and LLM API for automated Boolean query construcution and literature screening.
+Integration with word vector document, PubMed API and LLM API for automated Boolean query construcution, literature retrieval and literature screening.
 
 # Prerequisites
 Python 3.x
@@ -18,11 +18,11 @@ A deepseek API key.
 A Siliconflow API key.
 
 # Installation
-Clone the repository
+Clone all scripts in the "Boolean query construction, literature retrieval and literature screening" folder of repository. 
 
 Download mesh_index.faiss, mesh_metadata.pkl, supple_index.faiss and supple_metadata.pkl from https://huggingface.co/datasets/nyczy34/MedRAGent.
 
-Install the required dependencies
+Install the required dependencies.
 
 # Usage
 Define your PICOS, exclusion criteria, retrieval time, suffix rule and connection rule in Boolean query construction and literature screening.py
