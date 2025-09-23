@@ -16,7 +16,6 @@ SUPPLE_METADATA_PATH = os.path.join(script_dir, "supple_metadata.pkl")
 # API Key Configuration
 SILICON_API_KEY = ""
 DEEPSEEK_API_KEY = ""
-# KIMI_API_KEY = ""
 
 Entrez.email = ""
 Entrez.api_key = ""
@@ -29,3 +28,4 @@ DEFAULT_LOGIC_RULES = {
 
 # SSL Configuration
 ctx = ssl.create_default_context(cafile=certifi.where())
+
