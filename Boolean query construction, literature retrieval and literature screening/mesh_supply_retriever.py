@@ -11,7 +11,7 @@ from embeddings import ProBAAIbgem3Embeddings
 
 # Initialize LLM
 import os
-os.environ["OPENAI_API_KEY"] = DEEPSEEK_API_KEY
+os.environ["OPENAI_API_KEY"] = DEEPSEEK_API_KEY # If you want to use kimi, replace DEEPSEEK_API_KEY with actual kimi api key in config.py
 os.environ["OPENAI_API_BASE"] = "https://api.deepseek.com" # If you want to use kimi, input "https://api.moonshot.cn/v1"
 llm_deepseek = BaseChatOpenAI(model='deepseek-chat', max_retries=3) # If you want to use kimi, input "kimi-k2-0711-preview"
 
@@ -93,4 +93,5 @@ class EnhancedMeshRetriever:
                         f"[No match] {noun} Main index similarity: {main_distances[0][0]:.4f}, Supplementary index similarity: {supple_distances[0][0]:.4f}")
 
         return results
+
 
